@@ -11,7 +11,7 @@
                 </div>
 				<button type="submit" class="btn btn-default formbutton subbtn">Log me !</button>
             </form>
-				<button type="button" href=URLFOFILE."/inscription" class="btn btn-default inscriptionButton subbtn">S'inscrire</button>
+				<a href="<?php echo URLFOFILE."/inscription";?>" class="btn btn-default inscriptionButton subbtn">S'inscrire</a>
 		</div>
 	</div>
 </div>
