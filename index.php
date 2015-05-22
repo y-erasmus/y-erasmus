@@ -30,6 +30,5 @@ if(isset($_GET['params'])){
 		}
 		exit;
 	}
-
-
+	
 ?>

@@ -1,7 +1,7 @@
 <?php
 define('_USER'              , 'root');
 define('_PASS'              , '');
-define('_SERVER'            , 'mysql:dbname=school;host=127.0.0.1');
+define('_SERVER'            , 'mysql:dbname=y-erasmus;host=127.0.0.1');
 define('_TOKEN'				, 'YoanCyrilYann');
 define('_SITE'				, 'Nom du site');
 /* RELATIVE */

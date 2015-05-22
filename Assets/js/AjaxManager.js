@@ -67,6 +67,9 @@ AJAX.core = (function () {
                                 if(message.type == 'logout'){
                                     window.location = message.msg;
                                 }
+                                if(message.type == 'redi'){
+                                    window.location = message.msg;
+                                }
                                 setTimeout(function(){
                                     $('.formbutton').removeClass('loading').html(btnText);
                                 },150);

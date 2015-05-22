@@ -1,96 +1,279 @@
-@font-face {
-    font-family: 'frente_h1regular';
-    src: url('../font/frenteh1-regular-webfont.eot');
-    src: url('../font/frenteh1-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/frenteh1-regular-webfont.woff2') format('woff2'),
-         url('../font/frenteh1-regular-webfont.woff') format('woff'),
-         url('../font/frenteh1-regular-webfont.ttf') format('truetype'),
-         url('../font/frenteh1-regular-webfont.svg#frente_h1regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/*login*/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
 
+.verticalcenter
+{
+	vertical-align : middle;
+	display : table-cell;
 }
 
-body, html{
-	margin : 0;
-	height : 100%;
-}
-
-body{
-	background : #272737;
-	height: 100%;
-}
-
-.big-title{
-	font : normal 90px frente_h1regular;
-	color: #272737;
-	font-weight : 100;
-	text-align: center;
-	border-bottom: 3px solid #333351;
-  	margin: 0px 20px;
-  	padding : 15px 0px 15px 0px;
-  	letter-spacing: 10px;
-}
-
-.page{
-	width : 50%;
-	height : 100%;
-	min-height: 500px;
-	margin : 0 auto;
-	background : #f1f1f1;
-	overflow: hidden;
-}
-
-.picture{
-	width : 80%;
-	max-width : 400px;
-	margin : 0 auto;
-	display : block;
-	margin-top : 40px;
-}
-
-.likes-container{
-	margin : 0 auto;
+header{
 	overflow : hidden;
-	text-align : center;
+}
+.admin-menu{
+	width : 25%;
+	height : 100%;
+	float : left;
+	max-width : 250px;
+	min-width : 100px;
+	background : #222;
+	position : relative;
 }
 
-.like, .dislike{
-	display : inline-block;
-	height : 80px;
-	width : 80px;
-	background-size: contain!important;
-	margin : 10%;
+.admin-menu .menu-item{
+	width : 100%;
+	height : 55px;
+	border-top : 2px solid rgb(45, 45, 45);
 	cursor : pointer;
 }
 
-.dislike{
-	background : url('../images/dislike.png') center center no-repeat;
+.admin-menu .menu-item:hover{
+	background : #111;
 }
 
-.like{
-	background : url('../images/like.png') center center no-repeat;
-	-webkit-animation: mymove 1s infinite; /* Chrome, Safari, Opera */
-    animation: mymove 1s infinite;
-
+.admin-menu p {
+	padding-top: 12px;
+  font-family: Roboto;
+  font-size: 19px;
+  padding-left: 10px;
+  font-weight: 300;
 
 }
 
-/* Chrome, Safari, Opera */
-@-webkit-keyframes mymove {
-   from { transform: none; }
-	14% { transform: scale(1); }
-	28% { transform: scale(1.1); }
-	42% { transform: scale(1.05); }
-	70% { transform: scale(1.1); }
-	to { transform: none; }
+.admin-menu a {
+	text-decoration : none;
+	color : #C8C8C8;
 }
 
-@keyframes mymove {
-   from { transform: none; }
-	14% { transform: scale(1); }
-	28% { transform: scale(1.1); }
-	42% { transform: scale(1); }
-	70% { transform: scale(1.1); }
-	to { transform: none; }
+.users-list{
+	width : 70%;
+	float : left;
+}
+
+.half-right{
+	float : left!important;
+	width : 49%!important;
+	margin-left : 1%!important;
+}
+.half-left{
+	float : left!important;
+	width : 49%!important;
+	margin-right : 1%!important;
+}
+.form-control{
+	margin-top : 10px;
+	margin-bottom: 10px;
+	float : left;
+}
+::-webkit-input-placeholder {
+    color:    #272b30;
+}
+:-moz-placeholder {
+    color:    #272b30;
+}
+::-moz-placeholder {
+    color:    #272b30;
+}
+:-ms-input-placeholder {
+    color:    #272b30;
+}
+
+
+.subbtn{
+	margin-top : 10px!important;
+}
+input:focus, input:active, select:focus, select:active{
+	border : 1px solid #fff!important;
+  	box-shadow: none!important;
+	outline: none;
+}
+input.error:active, input.error:focus{
+	border: 2px solid #d9534f!important;
+}
+.outer-select{
+	float : left;
+	width : 100%;
+	border-radius : 5px;
+	margin : 10px 0px;
+}
+.outer-select select{
+	margin : 0;
+}
+.outer-select.error{
+	border : 2px solid #d9534f;
+}
+.subbtn:active, .subbtn:focus{
+	border-color : #509b51!important;
+	box-shadow: none!important;
+	outline: none;
+}
+.innerForm{
+	overflow: hidden;
+
+}
+
+.formError {
+	display : none;
+    text-align: center;
+    color:  #d9534f;
+}
+input.error{
+	border : 2px solid #d9534f;
+}
+.textbox
+{
+	height : 50px;
+}
+
+.inputtext
+{
+	font-size : 20px;
+}
+.questions{
+	margin-top : 20px;
+}
+.title-L{
+	font-weight : 100;
+	font-family : Roboto;
+	font-size : 46px;
+	letter-spacing : 2px;
+}
+
+.title-XL{
+	font-weight : 100;
+	font-family : Roboto;
+	font-size : 70px!important;
+	letter-spacing : 2px;
+}
+.textquestion{
+	text-indent : 30px;
+	font-family : Roboto;
+	font-size : 17px;
+	font-weight : 300;
+}
+.textanswer{
+	margin-left : 10px;
+	cursor : pointer;
+}
+.textanswer input{
+	margin-left : 20px;
+	vertical-align: text-top;
+	margin-right : 10px;
+}
+
+.textanswer label{
+	font-size : 17px;
+	font-weight : 300;
+	cursor : pointer;
+}
+
+.formtext
+{
+	font-weight : 300;
+	font-size : 24px;
+	color: #E3E3E3;
+}
+
+.jumbotronbody
+{
+	font: 300 14px Roboto!important;
+	padding : 15px 20px;
+	background : none;
+	border : none;
+}
+
+.centertext
+{
+	text-align : center;
+	width : 100%;
+}
+
+.formbutton
+{
+	display : block;
+	margin : 0 auto;
+	width : 100%;
+	height : 50px;
+	font-size : 20px;
+	background : #509b51;
+	font-weight : 300;
+	font-size : 24px;
+	color: #E3E3E3;
+	transition : all ease 0.4s;
+-moz-transition : all ease 0.4s;
+-webkit-transition : all ease 0.4s;
+background-position : center center;
+background-size: 19%;
+}
+
+.inscriptionButton {
+  display : block;
+	margin : 0 auto;
+	width : 100%;
+	height : 50px;
+	font-size : 20px;
+	background : #BF5D12;
+	font-weight : 300;
+	font-size : 24px;
+	color: #E3E3E3;
+	transition : all ease 0.4s;
+-moz-transition : all ease 0.4s;
+-webkit-transition : all ease 0.4s;
+background-position : center center;
+background-size: 19%;
+}
+
+.formbutton:hover{
+opacity : 0.8;
+background : #509b51;
+background-position : center center;
+background-size: 19%;
+}
+.formbutton.loading{
+	background : url('../images/ajax-loader.gif') #509b51 center center no-repeat;
+	background-size: 19%;
+}
+
+.logout{
+	color: #fff;
+  background-color: #d9534f;
+  margin: 0 auto;
+  display: block;
+  width: 75%;
+height : 40px;
+  position: absolute;
+  bottom: 20px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  left: 0;
+  right: 0;
+}
+.logout:hover {
+	opacity : 0.8;
+}
+.logout.loading{
+	background : url('../images/ajax-loader.gif') #d9534f center center no-repeat;
+	background-size: 50%;
+}
+
+
+.parentcenter
+{
+	display :table;
+	height : 100%;
+	margin : 0 auto;
+	width : 100%;
+	max-width : 700px;
+}
+
+html
+{
+	height : 100%;
+}
+
+body
+{
+	height : 100%;
+	background : #27292C;
+
 }

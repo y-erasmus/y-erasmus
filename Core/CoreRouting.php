@@ -6,12 +6,16 @@ class Routing {
 
 	private function __construct(){
 		self::$routing = array(
-			'test' => 'Controllers/testController.php',
-			'assessment' => 'Controllers/registerController.php',
+			'inscription' => 'Controllers/inscriptionController.php',
+			'profil' => 'Controllers/profilController.php',
+			'list' => 'Controllers/listController.php',
+			'search' => 'Controllers/searchController.php',
+			'inbox' => 'Controllers/inboxController.php',
+			'forum' => 'Controllers/forumController.php',
 			'404' => 'Content/404.php',
 			'admin' => array( '' => 'Controllers/adminController.php',
 							'correction' => 'Controllers/correctionController.php'),
-			'' => 'Controllers/homeController.php'
+			'' => 'Controllers/connexionController.php'
 		);
 	}
 
