@@ -1,4 +1,13 @@
 <?php
+
+/**
+ * Created by PhpStorm.
+ * User: Carlos
+ * Date: 22/05/2015
+ * Time: 14:56
+ */
+
+>>>>>>> origin/charlse
 /*======== A J A X =========*/
 $todo = coreFormat::sanitizePost('todo');
 switch($todo){

@@ -79,6 +79,21 @@ header{
     font-size: 20px;
 }
 
+.radiobutton ::-webkit-input-placeholder {
+    color:    #272b30;
+    opacity: 0.5;
+}
+.radiobutton :-moz-placeholder {
+    color:    #272b30;
+}
+.radiobutton ::-moz-placeholder {
+    color:    #272b30;
+}
+.radiobutton :-ms-input-placeholder {
+    color:    #272b30;
+}
+
+
 .half-left{
 	float : left!important;
 	width : 49%!important;
