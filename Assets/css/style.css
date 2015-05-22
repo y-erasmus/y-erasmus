@@ -55,6 +55,30 @@ header{
 	width : 49%!important;
 	margin-left : 1%!important;
 }
+
+.trois-left{
+    float : left!important;
+    width : 32%!important;
+    margin-right : 1%!important;
+}
+
+.trois-right{
+    float : left!important;
+    width : 32%!important;
+    margin-left : 1%!important;
+}
+
+.trois{
+    float : left!important;
+    width : 32%!important;
+    margin-left: 1%!important;
+    margin-right: 1%!important;
+
+}
+.radiobutton{
+    font-size: 20px;
+}
+
 .half-left{
 	float : left!important;
 	width : 49%!important;
