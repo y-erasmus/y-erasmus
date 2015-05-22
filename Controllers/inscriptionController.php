@@ -19,6 +19,7 @@ switch($todo){
                 }else{
                     if(!coreUser::isExist($mail, $nom, $prenom)){
                         coreUser::saveUser($pseudo, $password, $nom, $prenom, $mail);
+                        $ajaxmsg[] = array("type" => "redi", "msg" => URLFOFILE."/", "field" => "");
                     }else{
                         $ajaxmsg[] = array("type" => "erreur", "msg" => "Ce compte existe deja !", "field" => "");
                     }
