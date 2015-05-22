@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'frente_h1regular';
+    src: url('../font/frenteh1-regular-webfont.eot');
+    src: url('../font/frenteh1-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frenteh1-regular-webfont.woff2') format('woff2'),
+         url('../font/frenteh1-regular-webfont.woff') format('woff'),
+         url('../font/frenteh1-regular-webfont.ttf') format('truetype'),
+         url('../font/frenteh1-regular-webfont.svg#frente_h1regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body, html{
+	margin : 0;
+	height : 100%;
+}
+
+body{
+	background : #272737;
+	height: 100%;
+}
+
+.big-title{
+	font : normal 90px frente_h1regular;
+	color: #272737;
+	font-weight : 100;
+	text-align: center;
+	border-bottom: 3px solid #333351;
+  	margin: 0px 20px;
+  	padding : 15px 0px 15px 0px;
+  	letter-spacing: 10px;
+}
+
+.page{
+	width : 50%;
+	height : 100%;
+	min-height: 500px;
+	margin : 0 auto;
+	background : #f1f1f1;
+	overflow: hidden;
+}
+
+.picture{
+	width : 80%;
+	max-width : 400px;
+	margin : 0 auto;
+	display : block;
+	margin-top : 40px;
+}
+
+.likes-container{
+	margin : 0 auto;
+	overflow : hidden;
+	text-align : center;
+}
+
+.like, .dislike{
+	display : inline-block;
+	height : 80px;
+	width : 80px;
+	background-size: contain!important;
+	margin : 10%;
+	cursor : pointer;
+}
+
+.dislike{
+	background : url('../images/dislike.png') center center no-repeat;
+}
+
+.like{
+	background : url('../images/like.png') center center no-repeat;
+	-webkit-animation: mymove 1s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 1s infinite;
+
+
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+   from { transform: none; }
+	14% { transform: scale(1); }
+	28% { transform: scale(1.1); }
+	42% { transform: scale(1.05); }
+	70% { transform: scale(1.1); }
+	to { transform: none; }
+}
+
+@keyframes mymove {
+   from { transform: none; }
+	14% { transform: scale(1); }
+	28% { transform: scale(1.1); }
+	42% { transform: scale(1); }
+	70% { transform: scale(1.1); }
+	to { transform: none; }
+}
