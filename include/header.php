@@ -8,6 +8,7 @@
       <script src="<?php echo URLFOFILE; ?>/Assets/js/jquery-1.11.1.min.js"></script>
 
       <script src="<?php echo URLFOFILE; ?>/Assets/js/AjaxManager.js"></script>
+        <script src="<?php echo URLFOFILE; ?>/Assets/js/viewManager.js"></script>
       <script src="<?php echo URLFOFILE; ?>/Assets/js/core.js"></script>
     </head>
     <body>
