@@ -262,6 +262,22 @@ background-position : center center;
 background-size: 19%;
 }
 
+.TriLangueButton {
+	margin : 0 auto;
+	width : 50%;
+	height : 50px;
+	font-size : 20px;
+	background : #509b51;
+	font-weight : 300;
+	font-size : 24px;
+	color: #E3E3E3;
+	transition : all ease 0.4s;
+-moz-transition : all ease 0.4s;
+-webkit-transition : all ease 0.4s;
+background-position : center center;
+background-size: 19%;
+}
+
 .formbutton:hover{
 opacity : 0.8;
 background : #509b51;
