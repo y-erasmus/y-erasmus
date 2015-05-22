@@ -2,7 +2,7 @@
 
 require('requires.php');
 
-CoreSql::connect();
+//CoreSql::connect();
 //$res = CoreSql::query('select * from categories');
 //$res = CoreSql::exec('insert into categories (name, slug) VALUES ("teest","teest")');
 /*$obj = new stdClass();
