@@ -3,12 +3,12 @@
 $todo = coreFormat::sanitizePost('todo');
 switch($todo){
     case 'connection':
-        if($_POST['mail'] && $_POST['password']){
-            $mail = coreFormat::sanitizePost('mail');
+        if($_POST['pseudo'] && $_POST['password']){
+            $pseudo = coreFormat::sanitizePost('pseudo');
             $pass = coreFormat::sanitizePost('password');
-              if($user = coreUser::isMailAdminExist($mail)){
+              if($user = coreUser::isMailAdminExist($pseudo)){
                   if(CoreSecure::cryptMatch($pass, $user['pass'])){
-                      CoreSession::create($user['mail'], $user['firstname'], $user['lastname']);
+                      CoreSession::create($user['pseudo'], $user['firstname'], $user['lastname']);
                       $html = CoreContent::getAdminResultsHtml();
                       //coreSession::isValid();
                       $ajaxmsg[] = array("type" => "redirect", "msg" => "$html", "field" => "");
