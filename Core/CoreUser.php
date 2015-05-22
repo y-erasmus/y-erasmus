@@ -73,13 +73,10 @@ class CoreUser {
         }
 	}
 
-	public static function saveUser($mail, $firstname, $lastname, $class, $formation){
-        $query = CoreSql::getPDO()->prepare("INSERT INTO user (firstname, lastname, mail, id_class, id_formation) VALUES (:firstname, :lastname, :mail, :class, :formation);");
-		$query->bindParam(':firstname', $firstname, PDO::PARAM_STR);
-		$query->bindParam(':lastname', $lastname, PDO::PARAM_STR);
-		$query->bindParam(':mail', $mail, PDO::PARAM_STR);
-		$query->bindParam(':class', $class, PDO::PARAM_STR);
-		$query->bindParam(':formation', $formation, PDO::PARAM_STR);
+	public static function saveUser($pseudo, $password){
+        $query = CoreSql::getPDO()->prepare("INSERT INTO user (Pseudo, Password) VALUES (:Pseudo, :Password);");
+		$query->bindParam(':Pseudo', $pseudo, PDO::PARAM_STR);
+		$query->bindParam(':Password', (coreSecure::cryptPass($password)), PDO::PARAM_STR);
 		if($query->execute()){
 			return CoreSql::getPDO()->lastInsertId();
         }else{
