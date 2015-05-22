@@ -13,5 +13,6 @@ define('IMAGES'				,  URL.'images');
 define('ASSETS'				,  URL.'Assets/');
 define('JS'					,  ASSETS.'js/');
 define('CSS'				,  URL.'css/');
+
 define('URLFOFILE'          ,  "http://".$_SERVER['SERVER_NAME'].dirname($_SERVER['SCRIPT_NAME']))
 ?>
