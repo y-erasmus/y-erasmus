@@ -13,7 +13,7 @@
                     <input class="form-control textbox inputtext half-right datedepa" name="datdepa" type="text" placeholder="Date de départ">
 
                     <div class="outer-select half-left">
-	                    <select name="Langue Maternelle" class="form-control textbox inputtext">
+	                    <select name="maternellelang" class="form-control textbox inputtext">
 	                      <option selected disabled>Langue Maternelle</option>
 	                      <option value="1">Français</option>
 	                      <option value="2">English</option>
@@ -22,14 +22,14 @@
                           <option value="5">العربية</option>
                           <option value="6">中国</option>
                           <option value="7">Deutsch</option>
-                          <option value="7">日本人</option>
-                          <option value="7">Português</option>
-                          <option value="7">हिन्दी</option>
+                          <option value="8">日本人</option>
+                          <option value="9">Português</option>
+                          <option value="10">हिन्दी</option>
 
                         </select>
 					</div>
                     <div class="outer-select half-right">
-                        <select name="Langue Parle" class="form-control textbox inputtext">
+                        <select name="langsecond" class="form-control textbox inputtext">
                             <option selected disabled>Langue Parlée</option>
                             <option value="1">Français</option>
                             <option value="2">English</option>
@@ -38,9 +38,9 @@
                             <option value="5">العربية</option>
                             <option value="6">中国</option>
                             <option value="7">Deutsch</option>
-                            <option value="7">日本人</option>
-                            <option value="7">Português</option>
-                            <option value="7">हिन्दी</option>
+                            <option value="8">日本人</option>
+                            <option value="9">Português</option>
+                            <option value="10">हिन्दी</option>
 
                         </select>
                     </div>

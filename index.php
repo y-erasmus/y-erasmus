@@ -30,5 +30,7 @@ if(isset($_GET['params'])){
 		}
 		exit;
 	}
-	
+
+$lang = Array("1"=>"Français","2"=>"English","3"=>"Espanol","4"=>"Russe","5"=>"Arabe","6"=>"Chinois","7"=>"Allemand","8"=>"Japonais","9"=>"Portugais","10"=>"Hindi",)
+
 ?>
