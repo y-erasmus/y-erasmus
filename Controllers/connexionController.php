@@ -11,7 +11,7 @@ switch($todo){
                     $_SESSION['pseudo'] = $user['Pseudo'];
 
                       //coreSession::isValid();
-                      $ajaxmsg[] = array("type" => "redi", "msg" => "URLFOFILE./profil", "field" => "");
+                      $ajaxmsg[] = array("type" => "redi", "msg" => URLFOFILE."/profil", "field" => "");
                   }else{
                       $ajaxmsg[] = array("type" => "erreur", "msg" => "Bad credential", "field" => "");
                   }
