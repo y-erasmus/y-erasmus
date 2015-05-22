@@ -2,6 +2,7 @@
 /*======== A J A X =========*/
 $todo = coreFormat::sanitizePost('todo');
 switch($todo){
+<<<<<<< HEAD
     case 'register':
         if($_POST['pseudo'] && $_POST['password'] && $_POST['prenom'] && $_POST['nom']){
             $pseudo = coreFormat::sanitizePost('pseudo');
@@ -11,6 +12,7 @@ switch($todo){
 
 
             coreUser::saveUser($pseudo, $pass);
+
 
 
         }else{
@@ -37,9 +39,11 @@ switch($todo){
 }
 
 
+
     require_once '/include/header.php';
     require_once '/content/inscription.php';
     require_once '/include/footer.php';
+
 
 
 

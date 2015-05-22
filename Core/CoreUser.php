@@ -13,9 +13,9 @@ class CoreUser {
         }
 	}
 
-	public static function isMailAdminExist($mail){
-        $query = CoreSql::getPDO()->prepare("SELECT * FROM user_admin where mail=:mail ;");
-        $query->bindParam(':mail', $mail, PDO::PARAM_STR);
+	public static function isMailAdminExist($pseudo){
+        $query = CoreSql::getPDO()->prepare("SELECT * FROM user where Pseudo=:pseudo ;");
+        $query->bindParam(':pseudo', $pseudo, PDO::PARAM_STR);
         $go = $query->execute();
         $user = $query->fetch(PDO::FETCH_ASSOC);
         if($user){
