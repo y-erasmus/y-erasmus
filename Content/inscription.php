@@ -5,6 +5,7 @@
             <form action="<?php echo URL ?>" autocomplete="off" method="post" class="xhrForm">
 				<div class="innerForm">
                     <input name="todo" type="hidden" value="register">
+                    <input class="form-control textbox inputtext" type="text" placeholder="E-mail" name="mail" autocomplete="off">
                     <input class="form-control textbox inputtext half-left" type="text" placeholder="Nom" name="nom" autocomplete="off">
                     <input class="form-control textbox inputtext half-right" type="text" placeholder="Prénom" name="prenom" autocomplete="off">
                     <input class="form-control textbox inputtext half-left" id="Email" type="text" placeholder="Pseudo" name="pseudo" autocomplete="off">

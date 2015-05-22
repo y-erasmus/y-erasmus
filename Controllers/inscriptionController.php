@@ -2,22 +2,31 @@
 /*======== A J A X =========*/
 $todo = coreFormat::sanitizePost('todo');
 switch($todo){
-<<<<<<< HEAD
     case 'register':
-        if($_POST['pseudo'] && $_POST['password'] && $_POST['prenom'] && $_POST['nom']){
-            $pseudo = coreFormat::sanitizePost('pseudo');
-            $pass = coreSecure::cryptPass(coreFormat::sanitizePost('password'));
-            $prenom = coreFormat::sanitizePost('prenom');
-            $nom = coreFormat::sanitizePost('nom');
+            /*ALL REQUIRED FIELDS*/
+            $requiredFields = array('nom', 'prenom', 'pseudo', 'mail', 'password');
+            $completForm = true;
+            foreach($requiredFields as $requiredField){
+                if(!$$requiredField = coreFormat::sanitizePost($requiredField)){
+                    $ajaxmsg[] = array("type" => "erreur", "msg" => "Formulaire incomplet", "field" => $requiredField);
+                    $completForm = false;
+                }
+            }
+            // N O  I N P U T S  E R R O R
+            if($completForm){
+                if(!coreFormat::checkMail($mail)){
+                    $ajaxmsg[] = array("type" => "erreur", "msg" => "Adresse mail invalide", "field" => "mail");
+                }else{
+                    if(!coreUser::isExist($mail, $nom, $prenom)){
+                        coreUser::saveUser($pseudo, $password, $nom, $prenom, $mail);
+                    }else{
+                        $ajaxmsg[] = array("type" => "erreur", "msg" => "Ce compte existe deja !", "field" => "");
+                    }
+                }
+            }else{
+                $ajaxmsg[] = array("type" => "erreur", "msg" => "incomplete form", "field" => "");
+            }
 
-
-            coreUser::saveUser($pseudo, $pass);
-
-
-
-        }else{
-            $ajaxmsg[] = array("type" => "erreur", "msg" => "incomplete form", "field" => "");
-        }
         echo json_encode($ajaxmsg);
         exit();
     break;

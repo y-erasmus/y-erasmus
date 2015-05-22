@@ -25,17 +25,13 @@ class CoreUser {
         }
 	}
 
-	public static function isExist($mail, $firstname, $lastname, $formation, $class){
-		$query = CoreSql::getPDO()->prepare("SELECT * FROM user where mail=:mail
-			OR lastname =:lastname
-			AND firstname =:firstname
-			AND id_formation =:formation
-			AND id_class =:class;");
+	public static function isExist($mail, $nom, $prenom){
+		$query = CoreSql::getPDO()->prepare("SELECT * FROM user where Mail=:mail
+			OR Nom =:nom
+			AND Prenom =:prenom;");
 		$query->bindParam(':mail', $mail, PDO::PARAM_STR);
-		$query->bindParam(':lastname', $lastname, PDO::PARAM_STR);
-		$query->bindParam(':firstname', $firstname, PDO::PARAM_STR);
-		$query->bindParam(':formation', $formation, PDO::PARAM_INT);
-		$query->bindParam(':class', $class, PDO::PARAM_INT);
+		$query->bindParam(':prenom', $prenom, PDO::PARAM_STR);
+		$query->bindParam(':nom', $nom, PDO::PARAM_STR);
         $go = $query->execute();
         $user = $query->fetch(PDO::FETCH_ASSOC);
         if($user){
@@ -73,10 +69,13 @@ class CoreUser {
         }
 	}
 
-	public static function saveUser($pseudo, $password){
-        $query = CoreSql::getPDO()->prepare("INSERT INTO user (Pseudo, Password) VALUES (:Pseudo, :Password);");
+	public static function saveUser($pseudo, $pass, $nom, $prenom, $mail){
+        $query = CoreSql::getPDO()->prepare("INSERT INTO user (Pseudo, Password, Nom, Prenom, Mail) VALUES (:Pseudo, :Password, :Nom, :Prenom, :Mail);");
 		$query->bindParam(':Pseudo', $pseudo, PDO::PARAM_STR);
-		$query->bindParam(':Password', (coreSecure::cryptPass($password)), PDO::PARAM_STR);
+		$query->bindParam(':Password', (coreSecure::cryptPass($pass)), PDO::PARAM_STR);
+		$query->bindParam(':Nom', $nom, PDO::PARAM_STR);
+		$query->bindParam(':Prenom', $prenom, PDO::PARAM_STR);
+		$query->bindParam(':Mail', $mail, PDO::PARAM_STR);
 		if($query->execute()){
 			return CoreSql::getPDO()->lastInsertId();
         }else{
@@ -84,15 +83,5 @@ class CoreUser {
         }
 	}
 
-	public static function saveResponses($responses, $userId){
-		$query = CoreSql::getPDO()->prepare("INSERT INTO userresponses (user_id, results) VALUES (:user_id, :results)");
-		$query->bindParam(':user_id', $userId, PDO::PARAM_INT);
-		$query->bindParam(':results',$responses);
-        if($query->execute()){
-			return CoreSql::getPDO()->lastInsertId();
-        }else{
-            return false;
-        }
-	}
 }
 ?>

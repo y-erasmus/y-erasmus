@@ -3,7 +3,7 @@
 $todo = coreFormat::sanitizePost('todo');
 switch($todo){
     case 'connection':
-        if($_POST['pseudo'] && $_POST['password']){
+        if(isset($_POST['pseudo']) && $_POST['pseudo'] && isset($_POST['password']) && $_POST['password']){
             $pseudo = coreFormat::sanitizePost('pseudo');
             $pass = coreFormat::sanitizePost('password');
               if($user = coreUser::isMailAdminExist($pseudo)){
