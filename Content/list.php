@@ -25,9 +25,6 @@
   <?php
   foreach($users as $user){ ?>
     <div class="user">
-        <div class="left">
-            <img src="Assets/images/img2.png" alt=""/>
-        </div>
         <div class="right">
             <p> Pseudo : <?php echo $user['Pseudo'] ?> </p>
             <p> Nom : <?php echo $user['Nom'] ?>    </p>
