@@ -245,6 +245,23 @@ background-position : center center;
 background-size: 19%;
 }
 
+.inscriptionButton {
+  display : block;
+	margin : 0 auto;
+	width : 100%;
+	height : 50px;
+	font-size : 20px;
+	background : #BF5D12;
+	font-weight : 300;
+	font-size : 24px;
+	color: #E3E3E3;
+	transition : all ease 0.4s;
+-moz-transition : all ease 0.4s;
+-webkit-transition : all ease 0.4s;
+background-position : center center;
+background-size: 19%;
+}
+
 .formbutton:hover{
 opacity : 0.8;
 background : #509b51;
@@ -298,4 +315,22 @@ body
 	height : 100%;
 	background : #27292C;
 
+}
+
+.user{
+	width : 100%;
+	height : 150px;
+	margin : 20px 0px 20px 0px;
+	overflow: hidden;
+	border-bottom : 2px solid black;
+}
+
+.user .left img{
+	height : 100%;
+}
+
+.user .left, .user .right{
+	float : left;
+	height : 100%;
+	padding : 10px;
 }
